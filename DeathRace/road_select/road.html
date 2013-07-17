@@ -1,0 +1,85 @@
+<html>
+<head>
+
+<title>SelectRoad</title>
+	
+	<script type="text/javascript" src="../script.js"> </script>
+	
+	<script>
+		
+		function h()
+		{
+			document.getElementById("im1").style.zIndex="20";
+			document.getElementById("im2").style.zIndex="10";
+			 selectedroad=1; // sahrawy
+		}
+		function h2()
+		{
+			document.getElementById("im2").style.zIndex="20";
+			document.getElementById("im1").style.zIndex="10";
+			 selectedroad=2; // zera3y
+		}
+	</script>
+<style>
+#im1
+{
+	position:absolute;
+	z-index:20;
+	top:100;
+	left:100;
+	width:400;
+	height:400;
+}
+#im2
+{
+	position:absolute;
+	z-index:19;
+	top:200;
+	left:200;
+	width:425;
+	height:400;
+}
+</style>
+
+</head>
+<body bgcolor="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+		
+		<img src="images/desert.png" id="im1" width="200"  onclick="h()" />
+		<img src="images/agr.png" id="im2"  onclick="h2()"/>
+		
+<table id="Table_01" width="1350" height="670" border="0" cellpadding="0" cellspacing="0">
+	
+	<tr>
+		<td colspan="3">
+			<img src="images/road_01.gif" width="1350" height="470" alt="">
+		</td>
+	</tr>
+	
+	<tr>
+		<td rowspan="2">
+			<img src="images/road_02.gif" width="738" height="200" alt=""></td>
+		<td>
+			<a href="../race/race .html">
+				<img src="images/road_03.gif" width="232" height="82" id="run"
+					onmouseover="h1()" onmouseout="h3()"></a></td>
+		<td rowspan="2">
+			<img src="images/road_04.gif" width="380" height="200" alt=""></td>
+	</tr>
+	
+	<tr>
+		
+		<td>
+			<img src="images/road_05.gif" width="232" height="118" >
+		</td>
+	
+	</tr>
+	
+</table>
+		
+		<embed height="0" width="00" src="8717306978866_1_01_mp3_cbr_96_preview2.mp3" >
+
+</body>
+
+	
+	
+</html>

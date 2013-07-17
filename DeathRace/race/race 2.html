@@ -1,0 +1,153 @@
+<html>
+	<head>
+		<title>Race</title>
+			<style>
+			 #roaddiv
+			  {
+			   background-image:url('images/copyroad.gif');
+			   background-repeat:repeat-y;
+			  } 
+			  #race
+			  {
+			   overflow : hidden ;
+			   width:991px;
+			   height:670px ;
+			   position : absolute ;
+			   background-image : url('images/road2_01.gif');
+			
+			  }
+			</style>
+	
+	</head>
+	
+	
+	
+	<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" 
+		
+		style="overflow :hidden " onkeydown="MoveCar(event)"
+		
+		background="images/need-for-speed-most-wanted-wallpaper.jpg" ">
+
+
+	        	
+			<img id="road" src ="images/road2_01.gif" style ="position:absolute ;width:1000; height:800; top:0; left:0" />
+			<img id="road1" src ="images/road2_01.gif" style ="position:absolute ;width:1000; height:800; top:-800; left:0" />
+			<img id="car" src="images/3.png" style ="position:fixed ; width:75 ; height:150  ; top:450 ; left:500" />
+			
+			<img id="enemy1" src ="objects/1.png" style ="position:absolute ;width:75; height:150; top:-200; left:220 ; visibility : visible" />
+			<img id="enemy2" src ="objects/2.png" style ="position:absolute ;width:75; height:150; top:-500; left:325; visibility : visible" />
+			<img id="enemy3" src ="objects/3.png" style ="position:absolute ;width:75; height:150; top:-850; left:510 ; visibility : visible" />
+			<img id="enemy4" src ="objects/4.png" style ="position:absolute ;width:75; height:150; top:-1200; left:620 ; visibility : visible" />
+			<img id="enemy5" src ="objects/7.png" style ="position:absolute ;width:75; height:150; top:-1200; left:620 ; visibility : visible" />
+			<img id="enemy6" src ="objects/6.png" style ="position:absolute ;width:75; height:150; top:-1200; left:620 ; visibility : visible" />
+			<img id="enemy7" src ="objects/4 (2).png" style ="position:absolute ;width:75; height:150; top:-1200; left:620 ; visibility : visible" />
+			
+			
+			<form method="get" style="left=10"><big><b><font 
+			face="Segoe Print" color="black"><br/><br/><br/><br/>First name:
+			....................
+			....................
+			....................
+			....................
+			....................
+			....................
+			....................
+			....................
+			..........</font></b></big>
+			<input type="text" name="fname" style="height:50px;font-size:19pt;BACKGROUND-COLOR:transparent;font-family:Vivian;border: 1px solid brown;color:black;border: none;" id="score"><br>
+			
+			</form>
+		
+		<embed height="0" width="00" src="01. Flo Rida Ft. T-Pain - Low.mp" HIDDEN="True" LOOP="true"/>
+		
+		<script type="text/javascript" src="../script.js">		
+			
+		</script>
+			
+			<script>
+			
+				animateRoad();
+				IncreseScore();
+				AnimateEnemyCar();
+				Score();
+				function MoveCar(event)
+		
+	{
+			
+		if (event.keyCode==88)//speed on
+			{
+			  
+			  //racecar.src="images/1_2.png";
+			  clearInterval(roadTimer);
+			  roadTimer = setInterval("moveRoad()",turbo);
+			  clearInterval(enemyCarTimer);
+			  enemyCarTimer = setInterval("moveEnemyCar() " , 1);
+			  clearInterval(scoretimer);
+			  scoretimer=setInterval("Get()",7);
+			
+			}
+			
+		if (event.keyCode==90)//speed off
+			{
+			  
+			  //racecar.src="images/1.png";
+			  clearInterval(roadTimer);
+			  roadTimer = setInterval("moveRoad()",speed);
+			  clearInterval(enemyCarTimer);
+		      enemyCarTimer = setInterval("moveEnemyCar() " , enemyspeed);
+			  clearInterval(scoretimer);
+			  scoretimer=setInterval("Get()",50);		
+			  
+			}	
+		
+		
+		if (event.keyCode==39)//right
+			{
+				if(racecar.style.pixelLeft <589)
+					{
+						
+					racecar.style.pixelLeft +=15;
+					
+						
+					}
+			}
+		
+		if (event.keyCode==37)//left
+			{	
+				if(racecar.style.pixelLeft > 200)
+					{
+					racecar.style.pixelLeft -=15;
+					
+					}
+			}
+		
+		if (event.keyCode==38)//up
+			{
+				if(racecar.style.pixelTop >20)
+					{
+					racecar.style.pixelTop -=10;
+					
+					speed=7;
+					}
+			}
+		
+		if(event.keyCode==40)//down
+			{	
+				if(racecar.style.pixelTop <500)
+					{
+					racecar.style.pixelTop +=10;
+					
+					}
+			}				
+		
+	}
+
+	
+	
+			</script>
+			
+		<embed height="0" width="00" src="tiesto 2012 welcome to ibiza.mp3" >
+		<embed height="0" width="00" src="348.wav" loop="TRUE">
+		
+</body>		
+</html>
